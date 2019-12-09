@@ -6,14 +6,34 @@ import { Contact } from './Contact';
 import { NoMatch } from './NoMatch';
 import { Layout } from './components/Layout';
 import { NavigationBar } from './components/NavigationBar';
-import { Jumbotron } from './components/Jumbotron'; 
+import { Container } from 'react-bootstrap/Container'
+
+
+
+
+
+/*
+<Card className="text-center">
+  <Card.Header>Featured</Card.Header>
+  <Card.Body>
+    <Card.Title>Special title treatment</Card.Title>
+    <Card.Text>
+      With supporting text below as a natural lead-in to additional content.
+    </Card.Text>
+    <Button variant="primary">Go somewhere</Button>
+  </Card.Body>
+  <Card.Footer className="text-muted">2 days ago</Card.Footer>
+</Card>
+*/
+
+
+
 
 function App() {
   return (
     <React.Fragment>
-    <Router>
-      <NavigationBar />
-      <Jumbotron />
+      <Router>
+        <NavigationBar />
          <Layout>
             <Switch>
               <Route exact path="/" component={Home} />
