@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Nav, Navbar, ButtonGroup, Button,NavDropdown, Form, FormControl } from 'react-bootstrap';
+import { Nav, Navbar, ButtonGroup, Button,NavDropdown, Form, FormControl,Dropdown } from 'react-bootstrap';
 import styled from 'styled-components';
 
 //import {Footer} from 'react-materialize';
@@ -22,6 +22,36 @@ const Styles = styled.div`
 export const NavigationBar = () => (
 
   <div>
+
+
+
+  <Dropdown>
+  <Dropdown.Toggle variant="success" id="dropdown-basic">
+    Dropdown Button
+  </Dropdown.Toggle>
+
+  <Dropdown.Menu>
+    <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+    <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+  </Dropdown.Menu>
+</Dropdown>
+
+<Navbar expand="lg" variant="tabs" defaultActiveKey="/home" className="bg-dark justify-content-between">
+<Nav variant="tabs" defaultActiveKey="/home">
+<Nav.Item>
+  <Nav.Link href="/home">Active</Nav.Link>
+</Nav.Item>
+<Nav.Item>
+  <Nav.Link eventKey="link-1">Option 2</Nav.Link>
+</Nav.Item>
+<Nav.Item>
+  <Nav.Link eventKey="disabled" disabled>
+    Disabled
+  </Nav.Link>
+</Nav.Item>
+</Nav>
+</Navbar>
 
     <Navbar expand="lg" variant="tabs" defaultActiveKey="/home" className="bg-dark justify-content-between">
       <Navbar.Brand href="/">InfoPanel</Navbar.Brand>
