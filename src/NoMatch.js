@@ -2,6 +2,6 @@ import React from 'react'
 
 export const NoMatch = () => (
         <div>
-            <h2>NoMActh</h2>
+            <h2>NoMatch Page</h2>
         </div>
 )

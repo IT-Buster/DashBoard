@@ -10,7 +10,7 @@ const Styles = styled.div`
   a, .navbar-brand, .navbar-nav .nav-link {
     color: #bbb;
     &:hover {
-      color: white;
+      color: red;
     }
   }
 `;
@@ -18,7 +18,7 @@ const Styles = styled.div`
 export const NavigationBar = () => (
   <Styles>
     <Navbar expand="lg">
-      <Navbar.Brand href="/">Code Life</Navbar.Brand>
+      <Navbar.Brand href="/">Dashboard</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
