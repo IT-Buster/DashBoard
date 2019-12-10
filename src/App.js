@@ -19,6 +19,7 @@ function App() {
   fetch(`http://numbersapi.com/455`)
   // fetch(`https://przyjazdy.pl/warszawa/s/145803`)
   // http://api.timezonedb.com/v2.1/get-time-zone?key=ONJSMB3BUZLL&format=json&by=zone&zone=Europe/Warsaw
+  // http://api.timezonedb.com/v2.1/get-time-zone?key=ONJSMB3BUZLL&format=json&by=zone&zone=Europe/Warsaw
   .then(res => {
     if (res.ok) {
       return res
