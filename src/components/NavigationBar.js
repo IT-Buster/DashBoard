@@ -1,9 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Nav, Navbar, ButtonGroup, Button,NavDropdown, Form, FormControl,Dropdown } from 'react-bootstrap';
-import styled from 'styled-components';
 
-//import {Footer} from 'react-materialize';
+import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import styled from 'styled-components';
 
 const Styles = styled.div`
   .navbar {
@@ -15,39 +13,27 @@ const Styles = styled.div`
       color: white;
     }
   }
-  .dropdown-item {
-    color: black;
-  }
   .dropdown-menu {
-    background-color: red;
-  }
-  .dropdown-divider {
-    color: black;
-  }
+    background-color: #555 ;
+  }  
   .dropdown-item:hover {
-    background-color: green;
+    background-color: #ccc;
   }
-  .dropdown-item:focus {
-    background-color: blue;
-  }
-
 `;
-
-
 
 export const NavigationBar = () => (
 
   <Styles>
-    <Navbar bg="dark" expand="lg">
+    <Navbar expand="sm" variant="dark" bg="dark">
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="mr-auto">
-        <Nav.Link href="/home">Home</Nav.Link>
-        <Nav.Link href="/contact">Link</Nav.Link>
+        <Nav.Link href="/">Home</Nav.Link>
+        <Nav.Link href="/contact">Contact</Nav.Link>
         <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-          <NavDropdown.Item href="/about">Action</NavDropdown.Item>
+          <NavDropdown.Item href="/about">About</NavDropdown.Item>
           <NavDropdown.Divider />
-          <NavDropdown.Item href="/about55">Separated link</NavDropdown.Item>
+          <NavDropdown.Item href="/about55">NoMatch</NavDropdown.Item>
         </NavDropdown>
       </Nav>
     </Navbar.Collapse> 

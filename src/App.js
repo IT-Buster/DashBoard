@@ -6,30 +6,34 @@ import { Contact } from './Contact';
 import { NoMatch } from './NoMatch';
 import { Layout } from './components/Layout';
 import { NavigationBar } from './components/NavigationBar';
-import { Container } from 'react-bootstrap/Container'
-
-
-
-
-
-/*
-<Card className="text-center">
-  <Card.Header>Featured</Card.Header>
-  <Card.Body>
-    <Card.Title>Special title treatment</Card.Title>
-    <Card.Text>
-      With supporting text below as a natural lead-in to additional content.
-    </Card.Text>
-    <Button variant="primary">Go somewhere</Button>
-  </Card.Body>
-  <Card.Footer className="text-muted">2 days ago</Card.Footer>
-</Card>
-*/
-
-
-
 
 function App() {
+/*
+  handleDateChange = (e) => {
+    const value = e.target.value;
+    console.log(value)
+  }
+
+
+  console.log("TESTowe TESTY ");
+  fetch(`http://numbersapi.com/455`)
+  // fetch(`https://przyjazdy.pl/warszawa/s/145803`)
+  // http://api.timezonedb.com/v2.1/get-time-zone?key=ONJSMB3BUZLL&format=json&by=zone&zone=Europe/Warsaw
+  .then(res => {
+    if (res.ok) {
+      return res
+    }
+    throw Error(res.status);
+    console.log(res)
+  })
+  .then(res => res.json())
+  .then(data => this.setState({
+    text: data.text
+  }))
+  .catch(err => {
+    this.setState({ text: "Jest problem :( " + err })
+  })
+*/
   return (
     <React.Fragment>
       <Router>
@@ -41,9 +45,11 @@ function App() {
               <Route path="/contact" component={Contact} />
               <Route component={NoMatch} />
             </Switch>
+          
         </Layout>
       </Router>
     </React.Fragment>
+
   );
 }
 
