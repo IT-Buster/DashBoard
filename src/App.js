@@ -4,8 +4,38 @@ import { Home } from './Home';
 import { About } from './About';
 import { Contact } from './Contact';
 import { NoMatch } from './NoMatch';
+import { Charts } from './Charts'; 
 import { Layout } from './components/Layout';
 import { NavigationBar } from './components/NavigationBar';
+
+
+
+const MongoClient = require('mongodb').MongoClient;
+const assert = require('assert');
+
+const url = 'mongodb://localhost:27017';
+
+// Database Name
+const dbName = 'iot';
+
+// Use connect method to connect to the server
+MongoClient.connect(url, function(err, client) {
+  assert.equal(null, err);
+  console.log("Connected successfully to server");
+ 
+  const db = client.db(dbName);
+ 
+  client.close();
+});
+
+
+
+
+
+
+
+
+
 
 function App() {
 /*
@@ -44,9 +74,9 @@ function App() {
               <Route exact path="/" component={Home} />
               <Route path="/about" component={About} />
               <Route path="/contact" component={Contact} />
+              <Route path="/charts" component={Charts} />
               <Route component={NoMatch} />
             </Switch>
-          
         </Layout>
       </Router>
     </React.Fragment>

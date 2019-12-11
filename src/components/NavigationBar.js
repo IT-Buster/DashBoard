@@ -30,6 +30,7 @@ export const NavigationBar = () => (
       <Nav className="mr-auto">
         <Nav.Link href="/">Home</Nav.Link>
         <Nav.Link href="/contact">Contact</Nav.Link>
+        <Nav.Link href="/charts">Charts</Nav.Link>
         <NavDropdown title="Dropdown" id="basic-nav-dropdown">
           <NavDropdown.Item href="/about">About</NavDropdown.Item>
           <NavDropdown.Divider />
