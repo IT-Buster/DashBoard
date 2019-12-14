@@ -7,28 +7,21 @@ import { NoMatch } from './NoMatch';
 import { Charts } from './Charts'; 
 import { Layout } from './components/Layout';
 import { NavigationBar } from './components/NavigationBar';
+//import mongoose from "mongoose/browser";
 
-/*
-const MongoClient = require('mongodb').MongoClient;
-const assert = require('assert');
 
-const url = 'mongodb://localhost:27017';
- 
-// Database Name
-const dbName = 'iot';
+const mongoose = require('mongoose');
 
-// Use connect method to connect to the server
-MongoClient.connect(url, function(err, client) {
-  assert.equal("res",err,"asdasda"); //  .equal(null, err);
-  console.log("Connected successfully to server");
- 
-  const db = client.db(dbName); 
- 
-  client.close();  
-}); 
-
-*/
-
+mongoose
+  .connect('mongodb://127.0.0.1:27017/iot', {
+    useUnifiedTopology: true,
+    useNewUrlParser: true,
+    useCreateIndex: true
+  })
+  .then(() => console.log('DB connected!'))
+  .catch(err => {
+    console.log(`DB Connection Error: ${err.message}`);
+  });
 
 
 
